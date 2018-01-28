@@ -1,0 +1,8 @@
+{
+    "modules":
+	{
+		"home":	          			{"url":"modules/website/task/home.html","name_for_search":"Home page"},
+		"about":	      		    {"url":"modules/website/task/about.html","name_for_search":"About"},
+		"questionnaire":	      	{"url":"modules/website/task/questionnaire.html","name_for_search":"Questionnaire"}
+	}
+}

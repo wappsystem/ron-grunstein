@@ -1,0 +1,9 @@
+{
+    "modules":
+	{
+        "booking":	      		    {"table_id":"20009702","demo_id":"17111902","demo_id_2":"17111901","url":"modules/booking/task/booking-panel.html","name_for_search":"Booking"},
+		"booking-form":	      		{"table_id":"20009702","demo_id":"17111902","url":"modules/booking/task/booking-form.html","name_for_search":""},
+		"booking-record":	   		{"table_id":"20009702","demo_id":"17111902","url":"modules/booking/task/booking-record.html","name_for_search":"Booking records"},
+		"availability":				{"table_id":"20009702","demo_id":"17111901","url":"modules/booking/task/availability.html","name_for_search":"Availability setup"}
+	}
+}

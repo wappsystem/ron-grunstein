@@ -1,0 +1,7 @@
+{
+    "modules":
+	{
+		"contact-us":	  			{"table_id":"20009702","demo_id":"17111803","url":"modules/contact-us/task/contact-us.html","name_for_search":"Contact us"},
+		"contact-us-record":  		{"table_id":"20009702","demo_id":"17111803","url":"modules/contact-us/task/contact-us-record.html","name_for_search":"Contact us record"}
+	}
+}

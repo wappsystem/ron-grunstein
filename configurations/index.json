@@ -1,0 +1,22 @@
+{
+	"api_path_development":"https://cbs.wappsystem.com/dev/",
+	"api_path_production":"https://cbs.wappsystem.com/dev/",
+	"default_production":"No",
+	"panels":{
+		"website":{
+            "url":"","modules":[
+                "modules/website/module.json",
+                "modules/booking/module.json",
+                "modules/contact-us/module.json",
+                "modules/first-visit/module.json"
+            ]
+        },
+        "management":{
+            "url":"modules/management/panel.html","modules":[
+                "modules/booking/module.json",
+                "modules/contact-us/module.json"
+            ]
+        },
+        "first-visit":{"url":"modules/first-visit/panel.html","modules":["modules/first-visit/module.json"]}
+	}
+}

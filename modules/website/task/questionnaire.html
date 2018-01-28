@@ -1,0 +1,67 @@
+<div id=page__ID>
+	<div class="container-fluid" style='max-width:1000px'>
+		<div style='padding-top:50px'>
+			<!--<h1 class="text-center">Welcome to Integrated Sleep Health </h1> -->
+			<h3 class="text-center">Patient Portal</h3>
+          	<div class="container" style='padding-top:30px'>
+              	<div class="row">
+          	      	<div class="col-md-6">
+          	        	<h5 style='color:#00909f;'>After booking an appointment we ask you kindly to fill in some form <b>before your attend our clinic</b>.</h5>
+						<h6>This will allow us to review your situation before you arrive and make arrangement in your best interest.</h6>
+						<h6>You will be asked to sign in before you fill in any forms. We are securing your data and will allow you to Sign In again to continue if you didn't have time to fill in everyting.</h6>
+<!--                    <img src='__CURRENT_PATH__/home.html.sleep.jpg' style='width:100%;height:80%;padding-top:20px'></img> -->
+          	      	</div>
+         			<div class="col-md-6">
+					  <button id=first_visit__ID class="btn btn-secondary"><b>First Visit</b> click here</button>
+					</div>
+<!--          	        <p class=p1__ID>Integrated Sleep Health provides expert help for patients with all different types of sleep disorders. Our philosophy is patient-centred, grounded in our academic practice and clinical research experience. We are affiliated with Australia's leading sleep research centre and are part of a network of sleep experts in different clinical sub-specialties, including clinical psychology, nutrition and exercise.</p>
+                    <br>
+                    <b>We talk to patients, we don't sell machines. </b>
+-->
+         		</div>
+      	    </div>
+			<!--
+          <div>
+          <hr style='border-top:1px solid #f05f40;'></hr>
+	  	  <p>We can build a web application with unlimited number of shared reusable modules distributed on different static web servers around the world and maintained by different people with different skills!</p>
+		  <br>
+		  <a target=_blank href=https://github.com/vmiis>https://github.com/vmiis</a>
+		  <br><br>
+		</div>
+	-->
+		</div>
+	</div>
+</div>
+<script>
+	function F__ID(){
+		$('#first_visit__ID').on('click',function(){
+			$vm.nav_load_module('first-visit')
+		})
+	}
+</script>
+<style>
+	#D__ID{
+		height:100%;
+        overflow:auto;
+		animation: vm_module_fadein 1.0s;
+	}
+	#page__ID{
+		height:100%;
+		/*display: flex;
+		align-items: center;
+        */
+		color:#000;
+        background-color: #f8f9fac9;
+	}
+    .p1__ID{
+        font-family: "Helvetica";
+        font-size: 16px;
+        line-height: 1.6em;
+        letter-spacing: 0px;
+        font-weight: 300;
+        font-style: normal;
+    }
+	#first_visit__ID{
+		cursor: pointer;
+	}
+</style>

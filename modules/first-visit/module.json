@@ -1,0 +1,8 @@
+{
+    "modules":
+	{
+		"medicare-referrals":	{"table_id":"20011363","url":"modules/first-visit/task/medicare-referrals.html","name_for_search":"First Visit -  Medical Referral"},
+        "epworth-sleepiness-scale":	{"table_id":"20011364","url":"modules/first-visit/task/epworth-sleepiness-scale.html","name_for_search":"First Visit -  Epworth Sleepiness Scale"},
+        "health-history":	{"table_id":"20011365","url":"modules/first-visit/task/health-history.html","name_for_search":"First Visit -  Health History"}
+	}
+}

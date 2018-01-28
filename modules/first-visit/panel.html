@@ -1,0 +1,74 @@
+<div id=page__ID>
+	<div id=panel__ID class="container-fluid" style='max-width:800px'>
+		<div class="text-center panel__ID">
+			<h2>First Visit</h2>
+			<hr style='border-top:1px solid #000;'></hr>
+			<h5 class= "text-left">
+			Please complete each of the following sections.
+			</h5>
+			<div class="text-left">
+	          	<div class="container" style='padding:20px'>
+	              	<div class="row">
+	          	      	<div class="col-md-12"><div id="medicare-referrals"></div><u module=medicare-referrals>Medicare and Referrals</u></div>
+	         		</div>
+	                <div class="row">
+	          	      	<div class="col-md-12"><div id="epworth-sleepiness-scale"></div><u module=epworth-sleepiness-scale>Epworth Sleepiness Scale</u></div>
+	         		</div>
+					<div class="row">
+	          	      	<div class="col-md-12"><div id="health-history"></div><u module=health-history>Health History</u></div>
+	         		</div>
+	      	    </div>
+			</div>
+			<h5 class= "text-left">
+				Thank you for your time now in helping us help you during your upcoming visit. We look forward to seeing you soon.<br><br>
+			</h5>
+		</div>
+	</div>
+</div>
+
+<script>
+    function F__ID(){
+        var prefix=$vm.module_list[$vm.vm["__ID"].name].prefix;
+        $('#D__ID u').on('click',function(){
+            var m=$(this).attr('module');
+  			if(m!=undefined){
+  				if($vm.module_list[prefix+m]==undefined){
+  					alert(prefix+m +" is not in the module list.");
+  					return;
+  				}
+  				$vm.module_list[prefix+m].alert='1';
+  				$vm.nav_load_module(prefix+m);
+  			}
+        })
+	}
+</script>
+
+<style>
+#D__ID{
+	height:100%;
+	overflow:auto;
+	animation: vm_module_fadein 1.0s;
+	/*background:rgba(100,103,94,0.2);*/
+}
+#page__ID{
+	height:100%;
+	display: flex;
+	align-items: center;
+}
+.panel__ID{
+	color:#000;
+	font-weight: normal;
+	background: rgba(151,164,181,0.9);
+	padding: 30px 20px 10px 20px;
+	border-radius: 15px;
+}
+@media screen and (max-width:786px){
+	#page__ID{
+		display: block;
+	}
+}
+#panel__ID u{
+	cursor:pointer;
+}
+
+</style>
