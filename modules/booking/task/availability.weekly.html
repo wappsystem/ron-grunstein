@@ -1,0 +1,277 @@
+<div id=D__ID>
+	<section>
+        <div id=toolbar__ID class="navbar navbar-default">
+            <div class="col-sm form-inline">
+                <button id=save__ID type=button class='btn btn-secondary'><i class="fa fa-upload" title='Save'></i></button>
+                <button type=button class='btn btn-secondary' id=previous__ID><i class="fa fa-arrow-left"></i></button>
+                <button type=button class='btn btn-secondary' id=this__ID>This Week</button>
+                <button type=button class='btn btn-secondary' id=next__ID><i class="fa fa-arrow-right"></i></button>
+                <button type=button class='btn btn-secondary' id=refresh__ID><i class="fa fa-refresh"></i></button>
+            </div>
+            <div class="col-sm form-inline">
+                <span id=period__ID /></span>
+            </div>
+            <div class="col-sm form-inline">
+                <button type=button class='btn btn-secondary' id=copy__ID title='Copy'><i class="fa fa-copy"></i></button>
+                <button type=button class='btn btn-secondary' id=paste__ID title='Paste'><i class="fa fa-paste"></i></button>
+            </div>
+        </div>
+	</section>
+	<style>
+		#toolbar__ID{
+			background-color:#ccc;
+			padding:4px 0px;
+			margin-bottom:0px;
+			overflow:hidden
+		}
+		#toolbar__ID .form-inline > * {
+	        margin-right:5px;
+	    }
+		@media screen and (max-width:768px){
+			#toolbar__ID{
+				padding: 3px 0;
+			}
+			#toolbar__ID div{
+				padding-left:3px;
+			}
+			#row_1__ID{
+				padding-bottom: 3px;
+			}
+		}
+	</style>
+	<table class='table table-bordered table-sm'>
+		<tr>
+            <th></th>
+            <td>Monday</td>
+            <td>Tuesday</td>
+            <td>Wednesday</td>
+            <td>Thursday</td>
+            <td>Friday</td>
+            <td>Saturday</td>
+            <td>Sunday</td>
+		</tr>
+		<tr>
+			<td>08:00-08:30</td>
+			<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>08:30-09:00</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>09:00-09:30</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>09:30-10:00</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>10:00-10:30</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>10:30-11:00</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>11:00-11:30</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>11:30-12:00</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>12:00-12:30</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>12:30-13:00</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>13:00-13:30</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>13:30-14:00</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>14:00-14:30</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>14:30-15:00</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>15:00-15:30</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>15:30-16:00</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>16:00-16:30</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>16:30-17:00</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>17:00-17:30</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>17:30-18:00</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>18:00-18:30</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>18:30-19:00</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+	</table>
+	<script>
+		function F__ID(){
+			//--------------------------------------
+            var _ref=0
+            var _first_day;
+            var _last_day;
+            $('#previous__ID').on('click',function(){	_ref--;	_set_ref();		_request_and_render();	})
+            $('#this__ID').on('click',    function(){	_ref=0;	_set_ref();		_request_and_render();	})
+            $('#next__ID').on('click',    function(){	_ref++;	_set_ref();		_request_and_render();	})
+            $('#refresh__ID').on('click', function(){	_request_and_render();	})
+            var _set_ref=function(){
+                    var d1=$vm.date_add_days($vm.date_weekfirst(new Date()),7*_ref);
+                    var d2=$vm.date_add_days(d1,6)
+                    var s=$vm.date_to_string_dmy(d1)+' - '+$vm.date_to_string_dmy(d2)
+                    $('#period__ID').text(s);
+                    _first_day=$vm.date_to_string_dmy(d1);
+                    _last_day =$vm.date_to_string_dmy(d2);
+            }
+            _set_ref();
+            //---------------------------------------------
+			var demo_data_id=$vm.module_list[$vm.vm["__ID"].name].demo_id
+			var demo_db_pid=$vm.module_list[$vm.vm["__ID"].name].table_id
+			//--------------------------------------
+			var _records=[];
+			var dt={}
+			//--------------------------------------
+			$('#D__ID').on('load',function(){ _request_and_render(); })
+			$('#refresh__ID').on('click',function(){ _request_and_render(); })
+			$('#save__ID').on('click',function(){ save_data(); })
+			//--------------------------------------
+			var render=function(){
+				$('#D__ID td').each(function(){
+					var col = $(this).parent().children().index($(this));
+			        var row = $(this).parent().parent().children().index($(this).parent());
+					if(col>0 && row>0){
+						var p=col+"-"+row;
+						if(dt[p]!=undefined) $(this).html('<i class="fa fa-check"></i>')
+						else $(this).html('')
+					}
+				})
+                /*
+				$("#D__ID td").show();
+				var n=new Date($('#YY__ID').val(), $('#MM__ID').val(), 0).getDate();
+				if(n==30) $("#D__ID table td:nth-child(32)").hide();
+				if(n==29){ $("#D__ID table td:nth-child(32)").hide(); $("#D__ID table td:nth-child(31)").hide();}
+				if(n==28){ $("#D__ID table td:nth-child(32)").hide(); $("#D__ID table td:nth-child(31)").hide(); $("#D__ID table td:nth-child(30)").hide();}
+                */
+			}
+			//--------------------------------------
+			$('#D__ID td').on('click',function(){
+				var col = $(this).parent().children().index($(this));
+		        var row = $(this).parent().parent().children().index($(this).parent());
+				var p=col+"-"+row;
+				if(dt[p]==undefined) dt[p]='1';
+				else dt[p]=undefined
+				if(dt[p]!=undefined) $(this).html('<i class="fa fa-check"></i>')
+				else $(this).html('')
+				$('#save__ID').css('background','#E00');
+			})
+			//--------------------------------------
+			_request_and_render=function(){
+    		    var sql="select top 1 Information,ID from [TABLE-"+demo_db_pid+"] where DT1=@T1 and DT2=@T2 and V3="+demo_data_id;
+                var req={cmd:'query_records',sql:sql,t1:_first_day,t2:_last_day}
+				$VmAPI.request({data:req,callback:function(res){
+					_records=res.records;
+					if(_records.length>0) dt=_records[0].dt;
+					else dt={};
+					$('#save__ID').css('background','');
+					$('#refresh__ID').css('background','');
+					render();
+				}})
+			}
+			//--------------------------------------
+			var save_data=function(){
+				//--------------------------------------------------------
+				var data={"dt":dt};
+				var dbv={V3:demo_data_id,DT1:_first_day,DT2:_last_day}
+				//--------------------------------------------------------
+                var sql="select top 1 Information,ID from [TABLE-"+demo_db_pid+"] where DT1=@T1 and DT2=@T2 and V3="+demo_data_id;
+                var req={cmd:'query_records',sql:sql,t1:_first_day,t2:_last_day}
+				$VmAPI.request({data:req,callback:function(res){
+					if(res.records.length==0){
+						var req={cmd:"add_json_record",db_pid:demo_db_pid,data:data,dbv:dbv};
+						$VmAPI.request({data:req,callback:function(res){
+							$('#save__ID').css('background','');
+							$('#refresh__ID').css('background','');
+						}});
+					}
+					else{
+						var req={cmd:"modify_json_record",rid:res.records[0].ID,db_pid:demo_db_pid,data:data,dbv:dbv};
+						$VmAPI.request({data:req,callback:function(res){
+							$('#save__ID').css('background','');
+							$('#refresh__ID').css('background','');
+						}});
+					}
+				}});
+				//--------------------------------------------------------
+			}
+			//--------------------------------------
+            $('#copy__ID').on('click',function(){
+                $vm.availability_weekly_data=dt;
+            })
+            //--------------------------------------
+            $('#paste__ID').on('click',function(){
+                if($vm.availability_weekly_data!=undefined){
+                    dt=$vm.availability_weekly_data;
+                    render();
+                    $('#save__ID').css('background','#E00');
+                };
+            })
+            //--------------------------------------
+		}
+	</script>
+	<style>
+		#D__ID{
+			height:100%;
+	        overflow:auto;
+			animation: vm_module_fadein 1.0s;
+			background-color:#fff;
+		}
+		#D__ID table .fa{
+			color:green;
+		}
+		#D__ID table td{
+			padding-top:0;
+			padding-bottom:0;
+		}
+        #D__ID table td{
+			padding-top:0;
+			padding-bottom:0;
+		}
+        #D__ID table tr:not(:first-child) td:not(:first-child){
+			cursor:pointer;
+		}
+	</style>
+</div>

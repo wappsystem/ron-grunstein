@@ -1,0 +1,314 @@
+<div id=D__ID>
+    <section>
+        <div id=toolbar__ID class="navbar navbar-default">
+            <div class="col-sm form-inline">
+                <button type=button class='btn btn-secondary' id=previous__ID><i class="fa fa-arrow-left"></i></button>
+                <button type=button class='btn btn-secondary' id=this__ID>This Week</button>
+                <button type=button class='btn btn-secondary' id=next__ID><i class="fa fa-arrow-right"></i></button>
+                <button type=button class='btn btn-secondary' id=refresh__ID><i class="fa fa-refresh"></i></button>
+            </div>
+            <div class="col-sm form-inline">
+                <span id=period__ID /></span>
+            </div>
+        </div>
+	</section>
+	<style>
+		#toolbar__ID{
+			background-color:#ccc;
+			padding:4px 0px;
+			margin-bottom:0px;
+			overflow:hidden
+		}
+		#toolbar__ID .form-inline > * {
+	        margin-right:5px;
+	    }
+		@media screen and (max-width:768px){
+			#toolbar__ID{
+				padding: 3px 0;
+			}
+			#toolbar__ID div{
+				padding-left:3px;
+			}
+			#row_1__ID{
+				padding-bottom: 3px;
+			}
+		}
+	</style>
+
+
+	<table class='table table-bordered table-sm'>
+        <tr>
+            <th></th>
+            <td>Monday</td>
+            <td>Tuesday</td>
+            <td>Wednesday</td>
+            <td>Thursday</td>
+            <td>Friday</td>
+            <td>Saturday</td>
+            <td>Sunday</td>
+		</tr>
+		<tr>
+			<td>08:00-08:30</td>
+			<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>08:30-09:00</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>09:00-09:30</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>09:30-10:00</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>10:00-10:30</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>10:30-11:00</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>11:00-11:30</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>11:30-12:00</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>12:00-12:30</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>12:30-13:00</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>13:00-13:30</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>13:30-14:00</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>14:00-14:30</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>14:30-15:00</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>15:00-15:30</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>15:30-16:00</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>16:00-16:30</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>16:30-17:00</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>17:00-17:30</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>17:30-18:00</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>18:00-18:30</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>18:30-19:00</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+	</table>
+	<script>
+		function F__ID(){
+            //--------------------------------------
+            var prefix=$vm.module_list[$vm.vm['__ID'].name].prefix; if(prefix==undefined) prefix="";
+            //--------------------------------------
+            var _ref=0
+            var _first_day;
+            var _last_day;
+            var _last_day_1;
+            $('#previous__ID').on('click',function(){	_ref--;	_set_ref();		_request_and_render();	})
+            $('#this__ID').on('click',    function(){	_ref=0;	_set_ref();		_request_and_render();	})
+            $('#next__ID').on('click',    function(){	_ref++;	_set_ref();		_request_and_render();	})
+            $('#refresh__ID').on('click', function(){	_request_and_render();	})
+            var _set_ref=function(){
+                    var d1=$vm.date_add_days($vm.date_weekfirst(new Date()),7*_ref);
+                    var d2=$vm.date_add_days(d1,6)
+                    var d3=$vm.date_add_days(d1,7)
+                    var s=$vm.date_to_string_dmy(d1)+' - '+$vm.date_to_string_dmy(d2)
+                    $('#period__ID').text(s);
+                    _first_day =$vm.date_to_string_dmy(d1);
+                    _last_day  =$vm.date_to_string_dmy(d2);
+                    _last_day_1=$vm.date_to_string_dmy(d3);
+            }
+            _set_ref();
+			//--------------------------------------
+			var demo_data_id_2=$vm.module_list[$vm.vm["__ID"].name].demo_id_2
+			var demo_data_id=$vm.module_list[$vm.vm["__ID"].name].demo_id
+			var demo_db_pid=$vm.module_list[$vm.vm["__ID"].name].table_id
+			//--------------------------------------
+			var _records=[];
+			var dt={}
+			//--------------------------------------
+			$('#D__ID').on('show',function(){ _request_and_render(); })
+			$('#query__ID').on('click',function(){ _request_and_render(); })
+			//--------------------------------------
+			var render=function(){
+                //alert(JSON.stringify(dt))
+				$('#D__ID td').each(function(){
+					var col = $(this).parent().children().index($(this));
+			        var row = $(this).parent().parent().children().index($(this).parent());
+					if(col>0 && row>0){
+						var p=col+"-"+row;
+						if(dt[p]>1){
+							$(this).css({'background-color':'#ddd','cursor':'pointer'});
+							$(this).text("My booking");
+						}
+						else if(dt[p]==1){
+                            $(this).css({'background-color':'#fff','cursor':'pointer'});
+                        }
+						else{
+                             $(this).css('background-color','#ddd');
+                        }
+					}
+				})
+			}
+			//--------------------------------------
+			$('#D__ID td').on('click',function(){
+				var col = $(this).parent().children().index($(this));
+		        var row = $(this).parent().parent().children().index($(this).parent());
+				var p=col+"-"+row;
+				if(dt[p]==1){
+					if($vm.user=="guest"){
+						$vm.alert("You need to signin for booking.");
+					}
+                    var d0=$vm.date_parse(_first_day);
+                    var dd=col-1;
+                    var d=$vm.date_add_days(d0,parseInt(dd));
+                    d=$vm.date_to_string_dmy(d);
+					var t=$(this).parent().children().eq(0).html().split('-')[0];
+					$vm.nav_load_module(prefix+'booking-form',"",{date:d,time:t});
+				}
+				else if(dt[p]>1){
+					$vm.nav_load_module(prefix+'booking-form',"",{rid:dt[p]});
+				}
+			})
+			//--------------------------------------
+			var request_N;
+			var _request_and_render=function(){
+				request_N=3;
+				dt={}
+				//-----------------------------------
+                //doctor availability
+    		    var sql="select top 1 Information,ID from [TABLE-"+demo_db_pid+"] where DT1=@T1 and DT2=@T2 and V3="+demo_data_id_2;
+                var req={cmd:'query_records',sql:sql,t1:_first_day,t2:_last_day}
+				$VmAPI.request({data:req,callback:function(res){
+					_records=res.records;
+					if(_records.length>0){
+						var dt0=_records[0].dt;
+						for(var p in dt0){
+							var ss=p.split('-');
+							if(ss.length==2){
+                                //only set undefined;
+								if(dt[p]==undefined) dt[p]=1;
+							}
+						}
+					}
+					request_data_last();
+				}})
+				//-----------------------------------
+                //all bookings
+				var req={cmd:'query_records_dt1',db_pid:demo_db_pid,t1:_first_day,t2:_last_day_1,demo_data_id:demo_data_id}
+				$VmAPI.request({data:req,callback:function(res){
+					var records=res.records;
+					for(var i=0;i<records.length;i++){
+						var dt1=records[i].DT1;
+						var ss=dt1.split(' ');
+						if(ss.length>1){
+							var d=ss[0];
+							var t=ss[1];
+							var col=new Date(d).getDay();
+                            if(col==0) col=7; //sunday:0 -> 7
+                            //col=col-1; //0-6
+							var tt=t.split(':');
+							if(tt.length>1){
+								var ms=parseInt(tt[0]*60)+parseInt(tt[1])-8*60;
+								var row=ms/30+1;
+								var p=col+"-"+row;
+                                //only if not self booking
+                                if(dt[p]==1 || dt[p]==undefined) dt[p]=0;
+							}
+						}
+					}
+					request_data_last();
+				}})
+				//-----------------------------------
+                //self bookings
+				var sql="select ID, DT1=convert(varchar,DT1,20) from [TABLE-"+demo_db_pid+"] where DT1>=@T1 and DT1<@T2"
+				var req={cmd:'query_records_s2_v2',sql:sql,t1:_first_day,t2:_last_day_1}
+				$VmAPI.request({data:req,callback:function(res){
+					var records=res.records;
+					for(var i=0;i<records.length;i++){
+						var dt1=records[i].DT1;
+						var ss=dt1.split(' ');
+						if(ss.length>1){
+							var d=ss[0];
+							var t=ss[1];
+                            var col=new Date(d).getDay();
+                            if(col==0) col=7; //sunday:0 -> 7
+							var tt=t.split(':');
+							if(tt.length>1){
+								var ms=parseInt(tt[0]*60)+parseInt(tt[1])-8*60;
+								var row=ms/30+1;
+								var p=col+"-"+row;
+                                //if there is a booking, put ID there
+								dt[p]=records[i].ID;
+							}
+						}
+					}
+					request_data_last();
+				}})
+				//-----------------------------------
+			}
+			//--------------------------------------
+			var request_data_last=function(){
+				request_N--;
+				if(request_N==0) render();
+			}
+			//--------------------------------------
+		}
+	</script>
+	<style>
+		#D__ID{
+			height:100%;
+	        overflow:auto;
+			animation: vm_module_fadein 1.0s;
+			background-color:#fff;
+		}
+		#D__ID table .fa{
+			color:green;
+		}
+		#D__ID table td{
+			padding-top:0;
+			padding-bottom:0;
+		}
+	</style>
+</div>
