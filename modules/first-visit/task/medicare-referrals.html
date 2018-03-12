@@ -26,13 +26,17 @@
             <div class="row row__ID">
                 <div class="col-sm-6" >
                 </div>
-                <div class="col-sm-3">
-                    Reference Number
+                <div class="col-sm-2">
+                    Ref Number
                     <input  class="form-control" type="number" id=Medicare_reference_number__ID min=1 max=10 name="Medicare_reference_number" placeholder="Reference Number" required >
                 </div>
-                <div class="col-sm-3" >
+                <div class="col-sm-2" >
                     Expiry
-                    <input  class="form-control" type="text"  id=Medicare_expiry__ID name="Medicare_expiry" placeholder="Month/year" required >
+                    <input  class="form-control" type="number" min=1 max=12 id=Medicare_expiry_mm__ID name="Medicare_expiry_mm" placeholder="Month" required >
+                </div>
+                <div class="col-sm-2" >
+                    Expiry
+                    <input  class="form-control" type="number"  id=Medicare_expiry_yy__ID name="Medicare_expiry_yy" placeholder="Year" required >
                 </div>
             </div>
             <div class="row row__ID">
@@ -69,6 +73,14 @@
             </div>
             <div  class="row row__ID">
                 <div class="col-sm">
+                    <label class="control control-checkbox"><span id=xquest__ID>GP same as referring doctor</span>
+                        <input type="checkbox" name="GP_Ref" id=GP_Ref__ID value='1'>
+                        <div class="control_indicator"></div>
+                    </label>
+                </div>
+            </div>
+            <div  class="row row__ID">
+                <div class="col-sm">
                     GP/Family doctor
                     <input class="form-control" type="text" name="GP_Family_doctor" id=GP_Family_doctor__ID placeholder="GP/Family doctor" >
                 </div>
@@ -87,6 +99,8 @@
 function F__ID(){
     VmInclude:__CURRENT_PATH__/task.js
     $('#D__ID').on('load',function(){
+        var currentYear = (new Date).getFullYear();
+        $('#Medicare_expiry_yy__ID').prop('min',currentYear).prop('max',currentYear+5);
         radioValue = $("input[name='benefits']").val();
         switch(radioValue){
             case 'Medicare':
@@ -166,13 +180,12 @@ function F__ID(){
 
 }
 </script>
-
 <style>
 #D__ID{
     height:100%;
     overflow: auto;
     animation: vm_module_fadein 1.0s;
-    background: rgba(151,164,181,0.95);
+    background-color: #465a69;
 }
 #form_container__ID{
     padding-top:50px;
@@ -183,17 +196,17 @@ function F__ID(){
     font-family: Verdana,sans-serif;
     font-size: 15px;
     line-height: 1.5;
-    color: #000;
+    color: #fff;
 }
 #form_container__ID .row__ID{
     padding:6px 0;
 }
 #form_container__ID .row__ID:hover{
-    /*background-color: #727b84;*/
+    background-color: #203342;
 }
 #header__ID{
     background-color:#727b84;
-    color:#000;
+    color:#fff;
     padding:10px 15px 10px 15px;
     font-size:150%;
 }
@@ -202,7 +215,7 @@ function F__ID(){
     font-size:120%;
 }
 #F__ID{
-    border:1px solid #727b84;
+    border:1px solid #bbb;
     padding:6px 15px 20px 15px;
 }
 #F__ID label
@@ -257,7 +270,6 @@ function F__ID(){
 .control-radio .control_indicator {
     border-radius: 50%;
 }
-
 .control:hover input ~ .control_indicator,
 .control input:focus ~ .control_indicator {
     background: #cccccc;
@@ -294,5 +306,20 @@ function F__ID(){
 }
 .control-radio input:disabled ~ .control_indicator:after {
     background: #7b7b7b;
+}
+.control-checkbox .control_indicator {
+    border-radius: 10%;
+}
+.control-checkbox .control_indicator:after {
+    left: 8px;
+    top: 4px;
+    width: 3px;
+    height: 8px;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+.control-checkbox input:disabled ~ .control_indicator:after {
+    border-color: #7b7b7b;
 }
 </style>
