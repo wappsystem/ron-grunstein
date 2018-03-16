@@ -244,6 +244,8 @@
                 </div>
             </div>
             <hr style='border-top:1px solid #000;margin:0'></hr>
+            <input type="text"  name="ISI" id=ISI__ID style='display:none'/>
+            <input type="text"  name="ISI_1" id=ISI_1__ID style='display:none'/>
             <br>
     		<button id=submit__ID type="submit" class="btn btn-secondary">Submit</button>
     	</div>
@@ -252,11 +254,6 @@
 <script>
 	function F__ID(){
 	    VmInclude:__CURRENT_PATH__/task.js
-	    _before_submit=function(record,dbv){
-            record.ISI=(parseInt(record.ISI_2)+parseInt(record.ISI_3)+parseInt(record.ISI_4)+parseInt(record.ISI_5)+parseInt(record.ISI_1a)+parseInt(record.ISI_1b)+parseInt(record.ISI_1c)).toString();
-            record.ISI_1=(parseInt(record.ISI_1a)+parseInt(record.ISI_1b)+parseInt(record.ISI_1c)).toString();
-			return true;
-		}
 	}
 </script>
 <style>

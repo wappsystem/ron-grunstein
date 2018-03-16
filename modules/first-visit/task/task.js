@@ -51,6 +51,14 @@ $('#F__ID').submit(function(event){
         $('#DASS_AS__ID').val((parseInt($("input[name='DASS_2']:checked").val())+parseInt($("input[name='DASS_4']:checked").val())+parseInt($("input[name='DASS_7']:checked").val())+parseInt($("input[name='DASS_9']:checked").val())+parseInt($("input[name='DASS_15']:checked").val())+parseInt($("input[name='DASS_19']:checked").val())+parseInt($("input[name='DASS_20']:checked").val()))*2);
         $('#DASS_SS__ID').val((parseInt($("input[name='DASS_1']:checked").val())+parseInt($("input[name='DASS_6']:checked").val())+parseInt($("input[name='DASS_8']:checked").val())+parseInt($("input[name='DASS_11']:checked").val())+parseInt($("input[name='DASS_12']:checked").val())+parseInt($("input[name='DASS_14']:checked").val())+parseInt($("input[name='DASS_18']:checked").val()))*2);
     }
+    if(module_name=='first-visit_isi'){
+        $('#ISI__ID').val((parseInt($("input[name='ISI_2']:checked").val())+parseInt($("input[name='ISI_3']:checked").val())+parseInt($("input[name='ISI_4']:checked").val())+parseInt($("input[name='ISI_5']:checked").val())+parseInt($("input[name='ISI_1a']:checked").val())+parseInt($("input[name='ISI_1b']:checked").val())+parseInt($("input[name='ISI_1c']:checked").val())));
+        $('#ISI_1__ID').val((parseInt($("input[name='ISI_1a']:checked").val())+parseInt($("input[name='ISI_1b']:checked").val())+parseInt($("input[name='ISI_1c']:checked").val())));
+    }
+
+    if(module_name=='first-visit_fss'){
+        $('#fss__ID').val((parseInt($("input[name='fss_1']:checked").val())+parseInt($("input[name='fss_2']:checked").val())+parseInt($("input[name='fss_3']:checked").val())+parseInt($("input[name='fss_4']:checked").val())+parseInt($("input[name='fss_5']:checked").val())+parseInt($("input[name='fss_6']:checked").val())+parseInt($("input[name='fss_7']:checked").val())+parseInt($("input[name='fss_8']:checked").val())+parseInt($("input[name='fss_9']:checked").val())));
+    }
 
     //--------------------------------------------------------
     var data={}; var a=$("#F__ID").serializeArray(); $.each(a, function () { data[this.name]=this.value || '';});
