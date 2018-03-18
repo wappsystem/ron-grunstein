@@ -5,6 +5,7 @@
 	<form id=F__ID>
         <div class="container">
             	Have you suffered from any of the following symptoms or medical conditions?
+                <hr style='border-top:1px solid #727b84;'></hr>
             <div class="row row__ID">
                 <div class="col-sm-6 control-group">
                     <span id=quest__ID>Heart failure</span>
@@ -731,6 +732,145 @@
                     <textarea class="form-control" name="Medication" id="Medication__ID" placeholder="Name Reason Dose"></textarea>
                 </div>
             </div>
+            <hr style='border-top:1px solid #727b84;'></hr>
+            <div class="row row__ID">
+                <div class="col-sm-6 control-group">
+					<span id=quest__ID>1. Weight (kg). Type 0 for unknown </span>
+                </div>
+                <div class="col-sm-4 control-group">
+                    <input class="form-control" type="number" min=0 max=300 name="weight" id=weight__ID placeholder="Weight (kg)" required >
+				</div>
+            </div>
+            <div class="row row__ID">
+                <div class="col-sm-6 control-group">
+					<span id=quest__ID>2. Height (cm). Type 0 for unknown</span>
+                </div>
+                <div class="col-sm-4 control-group">
+                    <input class="form-control" type="number" min=0 max=240 name="height" id=height__ID placeholder="Height (cm)" required>
+				</div>
+            </div>
+            <hr style='border-top:1px solid #727b84;'></hr>
+            <div class="row row__ID">
+                <div class="col-sm-6 control-group">
+                    <span id=quest__ID>3. Have you ever had a sleep study before?</span>
+                </div>
+                <div class="col-sm-2 control-group">
+                    <label class="control control-radio">Yes
+                            <input type="radio"  name="sleep_study" id=sleep_study__ID value=Yes required />
+                        <div class="control_indicator"></div>
+                    </label>
+                </div>
+                <div class="col-sm-2 control-group">
+                    <label class="control control-radio">No
+                            <input type="radio" name="sleep_study" value=No />
+                        <div class="control_indicator"></div>
+                    </label>
+                </div>
+			</div>
+            <div class="row row__ID">
+                <div class="col-sm-1 control-group">
+                </div>
+                <div class="col-sm-11 control-group">
+                    1.	If yes, please add the details of your most recent sleep study:
+                </div>
+            </div>
+            <div class="row row__ID">
+                <div class="col-sm-1 control-group">
+                </div>
+                <div class="col-sm-3 control-group">
+					<span id=quest__ID>Year</span>
+                </div>
+                <div class="col-sm-6 control-group">
+                    <input class="form-control" type="date" name="sleep_study_date" id=sleep_study_date__ID placeholder="Date" >
+				</div>
+            </div>
+            <div class="row row__ID">
+                <div class="col-sm-1 control-group">
+                </div>
+                <div class="col-sm-3 control-group">
+					<span id=quest__ID>Location</span>
+                </div>
+                <div class="col-sm-6 control-group">
+                    <input class="form-control" type="text" name="sleep_study_location" id=sleep_study_location__ID placeholder="Location" >
+				</div>
+            </div>
+            <div class="row row__ID">
+                <div class="col-sm-1 control-group">
+                </div>
+                <div class="col-sm-3 control-group">
+					<span id=quest__ID>Doctor</span>
+                </div>
+                <div class="col-sm-6 control-group">
+                    <input class="form-control" type="text" name="sleep_study_doctor" id=sleep_study_doctor__ID placeholder="Doctor" >
+				</div>
+            </div>
+            <div class="row row__ID">
+                <div class="col-sm-1 control-group">
+                </div>
+                <div class="col-sm-3 control-group">
+					<span id=quest__ID>Result</span>
+                </div>
+                <div class="col-sm-6 control-group">
+                    <textarea class="form-control" type="text" name="sleep_study_result" id=sleep_study_result__ID placeholder="Result"></textarea>
+				</div>
+            </div>
+            <hr style='border-top:1px solid #727b84;'></hr>
+            <div class="row row__ID">
+                <div class="col-sm-6 control-group">
+                    <span id=quest__ID>4.	Have you ever used a masked breathing device such a continuous positive airway pressure (CPAP)?</span>
+                </div>
+                <div class="col-sm-2 control-group">
+                    <label class="control control-radio">Yes
+                            <input type="radio"  name="cpap" id=cpap__ID value=Yes required />
+                        <div class="control_indicator"></div>
+                    </label>
+                </div>
+                <div class="col-sm-2 control-group">
+                    <label class="control control-radio">No
+                            <input type="radio" name="sleep_study" value=No />
+                        <div class="control_indicator"></div>
+                    </label>
+                </div>
+			</div>
+            <div class="row row__ID">
+                <div class="col-sm-1 control-group">
+                </div>
+                <div class="col-sm-11 control-group">
+                    1.	If yes, please answer:
+                </div>
+            </div>
+            <div class="row row__ID">
+                <div class="col-sm-1 control-group">
+                </div>
+                <div class="col-sm-9 control-group">
+                    <span id=quest__ID>Was it successful/unsuccessful?</span>
+                    <label class="control control-radio">successful
+                            <input type="radio"  name="cpap" id=cpap__ID value=successful required />
+                        <div class="control_indicator"></div>
+                    </label>
+                    <label class="control control-radio">unsuccessful
+                            <input type="radio" name="cpap" value=unsuccessful />
+                        <div class="control_indicator"></div>
+                    </label>
+                </div>
+            </div>
+            <div class="row row__ID">
+                <div class="col-sm-1 control-group">
+                </div>
+                <div class="col-sm-9 control-group">
+					<span id=quest__ID>If unsuccessful, why?</span>
+                    <textarea class="form-control" type="text" name="cpap_unsuccessful" id=cpap_unsuccessful__ID placeholder=""></textarea>
+				</div>
+            </div>
+            <hr style='border-top:1px solid #727b84;'></hr>
+            <div class="row row__ID">
+                <div class="col-sm-10 control-group">
+					<span id=quest__ID>5.	Are you currently taking any regular medication. Please list medication and dose</span>
+                    <textarea class="form-control" name="medication" id="medication__ID" placeholder="Medication, Dose"></textarea>
+                </div>
+            </div>
+            <hr style='border-top:1px solid #727b84;'></hr>
+
 			<br>
     		<button id=submit__ID type="submit" class="btn btn-secondary">Submit</button>
     	</div>
