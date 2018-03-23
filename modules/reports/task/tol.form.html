@@ -1,0 +1,110 @@
+<section style='display:none'>
+    VmInclude:__COMPONENT__/toolbar/back_save.html
+    <form id=F__ID>
+        <table id=tb__ID style='width:600px;'>
+            <tr><td data-id=Participant data-custom=1>
+            	<input name=Participant  id=Participant__ID  type=text class=sel__ID />
+    			<input name=Participant_uid id=Participant_uid__ID type=text />
+    	    </td></tr>
+        </table>
+    </form>
+</section>
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="1100" height="800" align="middle">
+    <param value="__CURRENT_PATH__/flash/Tower_London.swf?ver=10"/>
+    <!--[if !IE]>-->
+    <object type="application/x-shockwave-flash" data="__CURRENT_PATH__/flash/Tower_London.swf?ver=10" width="1100" height="800">
+        <param value="__CURRENT_PATH__/flash/Tower_London.swf?ver=10"/>
+    <!--<![endif]-->
+        <a href="//www.adobe.com/go/getflash">
+            <img src="//www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player"/>
+        </a>
+    <!--[if !IE]>-->
+    </object>
+    <!--<![endif]-->
+</object>
+</section>
+<script>
+    function F__ID(){
+        function F__ID(){
+        //-------------------------------------
+            VmInclude:__COMPONENT__/grid/form.v3.js
+            VmInclude:__CURRENT_PATH__/task.old.form.js
+        //----------------------------------
+        $('#D__ID').on('load',function(){
+            _init();
+            _field_process();
+            _task_fields=$vm.vm['__ID'].op.grid_to_form_parameters.task_fields;
+            _set_participant_field();
+            custom_field_process();
+        })
+        //----------------------------------
+        var custom_field_process=function(){
+            $('#tb__ID td[data-custom=1]').each(function(){
+                var field=$(this).attr('data-id');
+                switch(field){
+                    case "Participant":
+                        $(this).find("input[name='"+field+"']").val(_records[I].Participant);
+                        $(this).find("input[name='"+field+"_uid']").val(_records[I].Participant_uid);
+                    break;
+                    case "TGME":
+                    case "TGMT":
+                    case "TMIS":
+                    case "TPLAN":
+                    case "TPT":
+                    case "TFT":
+                    case "TSS":
+                    case "TNO":
+                        $('#tb__ID').find("input[name='"+field+"']").val(_records[I][field]);
+                        $('#tb__ID').find("input[name='"+field+"']").on('blur',function(){
+                            _set_value(this.value,_records,I,field);
+                        })
+                    break;
+                }
+            })
+        }
+        //-------------------------------------
+        _before_submit=function(record,dbv){
+            return _set_status_and_participant(record,dbv);
+        }
+        //-------------------------------------
+        _before_submit_form=function(){
+            calc();
+            return true;
+        }
+        //-------------------------------------
+        g_tower_of_london_callback=function(param){
+            var a=param.split('&');
+            for(var i=0;i<a.length;i++){
+                var b=a[i].split('=');
+                try{
+                    _records[I][b[0]]=b[1];
+                }catch(e){}
+            }
+            $('#save__ID').triggerHandler('click');
+        };
+        //-------------------------------------
+        var calc=function(){
+    	    var tpt=_records[I].TPT.split(",");
+            var tft=_records[I].TFT.split(",");
+            var tss=_records[I].TSS.split(",");
+            var tno=_records[I].TNO.split(",");
+            var ss=0;
+            var plan=0.0;
+            var finish=0.0;
+            for (var i=0;i<tpt.length;i++){
+     	        plan=plan+parseInt(tpt[i]);
+     	        finish=finish+parseInt(tft[i]);
+     	        if(tss[i]=='false') ss++;
+            }
+            _records[I].TGME=(ss/tpt.length).toFixed(2).toString();
+            _records[I].TGMT=((plan+finish)/tpt.length*0.001).toFixed(3).toString();
+            _records[I].TMIS=ss.toString();
+            _records[I].TPLAN=((plan)/tpt.length*0.001).toFixed(3).toString();
+        }
+        //-------------------------------------
+    };
+</script>
+<style>
+    VmInclude:__BASE__/vmiis/Common-Code/style/default.css
+    VmInclude:__BASE__/vmiis/Common-Code/style/form.css
+</style>

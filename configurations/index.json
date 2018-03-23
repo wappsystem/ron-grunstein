@@ -14,9 +14,10 @@
         "management":{
             "url":"modules/management/panel.html","modules":[
                 "modules/booking/module.json",
-                "modules/contact-us/module.json"
+                "modules/contact-us/module.json",
+				"modules/reports/module.json"
             ]
         },
-        "first-visit":{"url":"modules/first-visit/panel.html","modules":["modules/first-visit/module.json"]}
+		"first-visit":{"url":"modules/first-visit/panel.html","modules":["modules/first-visit/module.json"]}
 	}
 }

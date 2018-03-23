@@ -1,13 +1,13 @@
 {
     "modules":
 	{
-		"medicare-referrals":	{"table_id":"20011363","url":"modules/first-visit/task/medicare-referrals.html","name_for_search":"First Visit -  Medical Referral"},
-        "health-history":	{"table_id":"20011365","url":"modules/first-visit/task/health-history.html","name_for_search":"First Visit -  Health History"},
-        "ess":	{"table_id":"20011364","url":"modules/first-visit/task/ess.html","name_for_search":"First Visit -  Epworth Sleepiness Scale"},
-        "dass":	{"table_id":"20011464","url":"modules/first-visit/task/dass.html","name_for_search":"First Visit -  Depression Anxiety Stress Scales"},
-        "isi":	{"table_id":"20011465","url":"modules/first-visit/task/isi.html","name_for_search":"First Visit -  Insomnia Severity Index"},
-        "psqi":	{"table_id":"20011466","url":"modules/first-visit/task/psqi.html","name_for_search":"First Visit - Pittsburgh Sleep Quality Index"},
-        "phq":	{"table_id":"20011467","url":"modules/first-visit/task/phq.html","name_for_search":"First Visit -  Patient Health Questionnaire"},
-        "fss":	{"table_id":"20011468","url":"modules/first-visit/task/fss.html","name_for_search":"First Visit -  Fatigue Severity Scale"}
+		"medicare-referrals":	{"table_id":"20011363","url":"modules/task/medicare-referrals.html","name_for_search":""},
+        "health-history":	{"table_id":"20011365","url":"modules/task/health-history.html","name_for_search":""},
+        "ess":	{"table_id":"20011364","url":"modules/task/ess.html","name_for_search":""},
+        "dass":	{"table_id":"20011464","url":"modules/task/dass.html","name_for_search":""},
+        "isi":	{"table_id":"20011465","url":"modules/task/isi.html","name_for_search":""},
+        "psqi":	{"table_id":"20011466","url":"modules/task/psqi.html","name_for_search":""},
+        "phq":	{"table_id":"20011467","url":"modules/task/phq.html","name_for_search":""},
+        "fss":	{"table_id":"20011468","url":"modules/task/fss.html","name_for_search":""}
 	}
 }

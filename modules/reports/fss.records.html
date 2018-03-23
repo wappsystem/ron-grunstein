@@ -8,9 +8,10 @@
     		var demo_data_id=1;
             //-------------------------------------
             VmInclude:__COMPONENT__/grid/grid.v3.js
-    		$('#new__ID').hide();
+            $('#new__ID').hide();
+            $('#save__ID').hide();
             //-------------------------------------
-            var fields="EES_1,EES_2,EES_3,EES_4,EES_5,EES_6,EES_7,EES_8,EES";
+            var fields="fss_1,fss_2,fss_3,fss_4,fss_5,fss_6,fss_7,fss_8,fss_9,fss";
             _fields="_Form,"+fields+",Submit Date|DateTime,Submitted by|Author,_Delete";
             //-------------------------------------
             $('#D__ID').on('load',function(){  _set_req(); _request_data(); })

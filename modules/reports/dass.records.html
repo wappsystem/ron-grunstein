@@ -1,0 +1,31 @@
+<div id=D__ID>
+    <div>
+        VmInclude:__COMPONENT__/grid/grid.v3.html
+    </div>
+    <script>
+        function F__ID(){
+    		//-------------------------------------
+    		var demo_data_id=1;
+            //-------------------------------------
+            VmInclude:__COMPONENT__/grid/grid.v3.js
+            $('#new__ID').hide();
+            $('#save__ID').hide();
+            //-------------------------------------
+            var fields="DASS_1,DASS_2,DASS_3,DASS_4,DASS_5,DASS_6,DASS_7,DASS_8,DASS_9,DASS_10,DASS_11,DASS_12,DASS_13,DASS_14,DASS_15,DASS_16,DASS_17,DASS_18,DASS_19,DASS_20,DASS_21,DASS_DS,DASS_AS,DASS_SS";
+            _fields="_Form,"+fields+",Submit Date|DateTime,Submitted by|Author,_Delete";
+            //-------------------------------------
+            $('#D__ID').on('load',function(){  _set_req(); _request_data(); })
+            //-------------------------------------
+    		_set_req=function(){
+    		    var sql="with tb as (select Information,ID,UID,PUID,DateTime,Author,RowNum=row_number() over (order by ID DESC) from [TABLE-"+_db_pid+"-@S1] )";
+    		    sql+="select Information,ID,UID,PUID,DateTime,Author,RowNum from tb where RowNum between @I6 and @I7";
+    		    var sql_n="select count(ID) from [TABLE-"+_db_pid+"-@S1]";
+    			_req={cmd:'query_records',db_pid:_db_pid,sql:sql,sql_n:sql_n,s1:'"'+$('#keyword__ID').val()+'"',I:$('#I__ID').text(),page_size:$('#page_size__ID').val()}
+    		}
+    		//-------------------------------------
+        }
+    </script>
+    <style>
+        VmInclude:__COMPONENT__/grid/grid.v3.css
+    </style>
+</div>

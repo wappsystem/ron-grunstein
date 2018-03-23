@@ -8,9 +8,10 @@
     		var demo_data_id=1;
             //-------------------------------------
             VmInclude:__COMPONENT__/grid/grid.v3.js
-    		$('#new__ID').hide();
+            $('#new__ID').hide();
+            $('#save__ID').hide();
             //-------------------------------------
-            var fields="benefits,Medicare_number,Medicare_reference_number,Medicare_expiry,DVA,Referring_doctor,Referring_doctor_address,GP_Family_doctor,GP_Family_doctor_address";
+            var fields="ISI_1a,ISI_1b,ISI_1c,ISI_2,ISI_3,ISI_4,ISI_5,ISI_1,ISI";
             _fields="_Form,"+fields+",Submit Date|DateTime,Submitted by|Author,_Delete";
             //-------------------------------------
             $('#D__ID').on('load',function(){  _set_req(); _request_data(); })

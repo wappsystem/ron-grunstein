@@ -1,0 +1,39 @@
+<section>
+    VmInclude:__COMPONENT__/grid/grid.v3.html
+</section>
+<script>
+    function F__ID(){
+        //-------------------------------------
+        VmInclude:__COMPONENT__/grid/grid.v3.js
+        VmInclude:__CURRENT_PATH__/task.js
+
+        //-------------------------------------
+        _task_fields="sf36_1,sf36_2,sf36_3_a,sf36_3_b,sf36_3_c,sf36_3_d,sf36_3_e,sf36_3_f,sf36_3_g,sf36_3_h,sf36_3_i,sf36_3_j,sf36_4_a,sf36_4_b,sf36_4_c,sf36_4_d,sf36_5_a,sf36_5_b,sf36_5_c,sf36_6,sf36_7,sf36_8,sf36_9_a,sf36_9_b,sf36_9_c,sf36_9_d,sf36_9_e,sf36_9_f,sf36_9_g,sf36_9_h,sf36_9_i,sf36_10,sf36_11_a,sf36_11_b,sf36_11_c,sf36_11_d,sf36_PF,sf36_RP,sf36_BP,sf36_GH,sf36_V,sf36_SF,sf36_RE,sf36_MH,sf36_PH,sf36_MMH";
+        _fields="_Form|form_module,Record ID|UID,Study_ID|Participant,"+_task_fields;
+        _fields+=",Submit Date|DateTime,Submitted by|Author,_Delete,_Hidden|Participant_uid";
+        _grid_to_form_parameters={task_fields:_task_fields};
+        //-------------------------------------
+        $('#D__ID').on('load',function(){  _set_req(); _request_data(); })
+        $('#D__ID').on('back',function(){  _set_req(); _request_data(); })
+        //-------------------------------------
+        _cell_render=function(records,I,field,td,set_value,source){
+            _default_cell_render(records,I,field,td,set_value,source);
+        }
+        //-------------------------------------
+        _before_submit=function(record,dbv){
+            return _set_status_and_participant(record,dbv);
+        }
+        //-------------------------------------
+    }
+</script>
+<style>
+    VmInclude:__COMPONENT__/grid/grid.v3.css
+ul.ui-autocomplete.ui-menu{font-size:12px}
+.ui-autocomplete li:hover{
+    color:White;
+    background:#96B202;
+    font-weight:normal;
+    outline:none;
+}
+
+</style>

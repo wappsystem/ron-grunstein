@@ -1,9 +1,19 @@
 <section id=form_container__ID>
     <div id=header__ID>
-		Medicare and referring doctors
+		Visit information, medicare and referring doctors
 	</div>
     <form id=F__ID>
         <div class="container">
+            <div  class="row row__ID">
+                <div class="col-sm">
+                    Appointment Date
+                    <input class="form-control" type="text" name="Appointment_date" id=Appointment_date__ID placeholder="Appointment Date" required >
+                </div>
+                <div class="col-sm">
+                    Please describe in 20 words or less, your reason for booking this appointment
+                    <textarea class="form-control" name="Reason" id=Reason__ID placeholder="Reason" required ></textarea>
+                </div>
+            </div>
             <div class="row row__ID">
                 <div class="col-sm-6" >
                     Benefits from..
@@ -175,7 +185,7 @@ function F__ID(){
             $('#ModalLabel').html('Error!');
         }
     })
-    $("input#Medicare_expiry__ID").datepicker({yearRange:"-0:+5",dateFormat:'mm/y',changeMonth:true, changeYear:true});
+    $("input#Appointment_date__ID").datepicker({dateFormat:'dd/mm/yy'});
 
 
 }

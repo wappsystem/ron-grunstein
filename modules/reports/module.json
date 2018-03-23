@@ -1,0 +1,13 @@
+{
+    "modules":
+	{
+		"medicare-referrals-reports":	{"table_id":"20011363","url":"modules/reports/medicare-referrals.records.html","name_for_search":""},
+        "health-history-reports":	{"table_id":"20011365","url":"modules/reports/health-history.records.html","name_for_search":""},
+        "ess-reports":	{"table_id":"20011364","url":"modules/reports/ess.records.html","name_for_search":""},
+        "dass-reports":	{"table_id":"20011464","url":"modules/reports/dass.records.html","name_for_search":""},
+        "isi-reports":	{"table_id":"20011465","url":"modules/reports/isi.records.html","name_for_search":""},
+        "psqi-reports":	{"table_id":"20011466","url":"modules/reports/psqi.records.html","name_for_search":""},
+        "phq-reports":	{"table_id":"20011467","url":"modules/reports/phq.records.html","name_for_search":""},
+        "fss-reports":	{"table_id":"20011468","url":"modules/reports/fss.records.html","name_for_search":""}
+	}
+}

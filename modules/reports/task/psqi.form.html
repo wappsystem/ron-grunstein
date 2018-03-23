@@ -20,7 +20,7 @@
                     <span id=quest__ID>BED TIME</span>
                 </div>
                 <div class="col-sm-3 control-group">
-                        <input type="time" class="form-control" name="PSQI1" id="PSQI1__ID" placeholder="HH:MM" required />
+                        <input type="text" class="form-control" name="PSQI1" id="PSQI1__ID" placeholder="HH:MM" required />
                 </div>
                 <div class="col-sm-4 control-group">
                     <span id=quest__ID><i>24 hour clock</i></span>
@@ -669,7 +669,7 @@
 </section>
 <script>
 	function F__ID(){
-	    VmInclude:__CURRENT_PATH__/task.js
+	    VmInclude:__CURRENT_PATH__/task.independent.form.js
 
         $('#PSQI1__ID').change(function(){
             if(/^(20|21|22|23|[01]\d|\d)(([:][0-5]\d){1,2})$/.test($('#PSQI1__ID').val())==false) $('#bedtime__ID').show();

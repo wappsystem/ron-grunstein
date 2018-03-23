@@ -1,0 +1,37 @@
+<section>
+    VmInclude:__COMPONENT__/grid/grid.v3.html
+</section>
+<script>
+    function F__ID(){
+        //-------------------------------------
+        VmInclude:__COMPONENT__/grid/grid.v3.js
+        VmInclude:__CURRENT_PATH__/task.js
+        //-------------------------------------
+        _task_fields="hs_1,hs_2,hs_3,hs_4,hs_5,hs_6,hs_7,hs_8,hs_9,hs_10,hs_11,hs_12,hs_13,hs_14,hs_15,hs_16,hs_17,hs_18,hs_19,hs_20,hs_21,hs_22,hs_23,hs_24,hs_25,hs_26,hs";
+        _fields="_Form|form_module,Status|S3,Notes|NT,Participant,"+_task_fields;
+        _fields+=",Submit Date|DateTime,Submitted by|Author,_Delete,_Hidden|Participant_uid";
+        //-------------------------------------
+        $('#D__ID').on('load',function(){  _set_req(); _request_data(); })
+        $('#D__ID').on('back',function(){  _set_req(); _request_data(); })
+        //-------------------------------------
+        _cell_render=function(records,I,field,td,set_value,source){
+            _default_cell_render(records,I,field,td,set_value,source);
+        }
+        //-------------------------------------
+        _before_submit=function(record,dbv){
+            record.hs=(parseInt(record.hs_1)+parseInt(record.hs_2)+parseInt(record.hs_3)+parseInt(record.hs_4)+parseInt(record.hs_5)+parseInt(record.hs_6)+parseInt(record.hs_7)+parseInt(record.hs_8)+parseInt(record.hs_9)+parseInt(record.hs_10)+parseInt(record.hs_11)+parseInt(record.hs_12)+parseInt(record.hs_13)+parseInt(record.hs_14)+parseInt(record.hs_15)+parseInt(record.hs_16)+parseInt(record.hs_17)+parseInt(record.hs_18)+parseInt(record.hs_19)+parseInt(record.hs_20)+parseInt(record.hs_21)+parseInt(record.hs_22)+parseInt(record.hs_23)+parseInt(record.hs_24)+parseInt(record.hs_25)+parseInt(record.hs_26)).toString();
+            return _set_status_and_participant(record,dbv);
+        }
+        //-------------------------------------
+    }
+</script>
+<style>
+    VmInclude:__COMPONENT__/grid/grid.v3.css
+    ul.ui-autocomplete.ui-menu{font-size:12px}
+    .ui-autocomplete li:hover{
+        color:White;
+        background:#96B202;
+        font-weight:normal;
+        outline:none;
+    }
+</style>
