@@ -171,8 +171,9 @@ $('#F__ID').submit(function(event){
     $VmAPI.request({data:req,callback:function(res){
         if(res.ret<=0)	alert("Sorry there is a problem. You can try again later.")
         else{
-            $vm.alert('The information has been successfully submitted')
-            window.history.back(-1);
+            //$vm.alert('The information has been successfully submitted')
+            //window.history.back(-1);
+            $vm.nav_load_module('first-visit')
         }
     }});
     //--------------------------------------------------------
